@@ -5,7 +5,9 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");  
 const encrypt = require("mongoose-encryption");
 const { Console } = require('console');
-const md5 = require('md5');
+const session = require('express-session');
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 
 const app = express();
@@ -46,11 +48,11 @@ app.post("/register", function(req, res){
 
    
     
-})
+});
 
 app.post("/login", function(req, res){
     
-});
+});;
 
 app.listen(3000, function(){
     console.log("Server started on port 3000")
